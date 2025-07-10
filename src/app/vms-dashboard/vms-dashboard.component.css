@@ -1,0 +1,53 @@
+.sidenav-content {
+    height: 100vh;
+}
+.sidenav{
+    width: 5%;
+}
+.custom-col-8 {
+    width: 75%;
+}
+.custom-height {
+    position: fixed;
+    height: 100%;
+}
+.chart-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 400px;
+}
+.content-area {
+  flex: 1;  
+}
+.computer-table-parent{
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+.computer-table tr,th,td {
+    padding: 10px;
+}
+.computer-table > tbody > tr:hover {
+    background-color: #ddd !important;
+    cursor: pointer;
+}
+.app-table-parent {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+.app-table tr,th,td {
+    padding: 10px;
+}
+.app-table > tbody > tr:hover {
+    background-color: #ddd !important;
+    cursor: pointer;
+}
+.app-no-data {
+    height: 200px;
+}

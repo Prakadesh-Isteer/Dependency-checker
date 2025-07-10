@@ -47,8 +47,8 @@
     <tr *ngIf="!computerData.applications?.length">
       <td colspan="6" class="empty">No applications found</td>
     </tr>
-    <tr *ngFor="let app of computerData.applications; let i = index">
-      <td>{{ app.softwareName }}</td>
+    <tr *ngFor="let app of getSortedApplications(); let i = index">
+      <td> <span [ngClass]="{'text-danger': app.vulnerabilities.length}" class="fnw-bold">{{ app.softwareName }} </span></td>
       <td>{{ app.vendorName }}</td>
       <td>{{ app.softwareVersion }}</td>
       <td>{{ app.installedDate }}</td>

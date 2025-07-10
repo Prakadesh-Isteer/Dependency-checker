@@ -1,0 +1,150 @@
+{ "computers":[
+  {
+    "computerId": "comp-001",
+    "machineName": "DESKTOP-001",
+    "osVersion": "Windows 11",
+    "ipAddress": "192.168.10.1",
+    "installedApplications": [
+      {
+        "appName": "Adobe Reader",
+        "version": "22.0",
+        "vulnerabilities": [{ "severity": "High" }, { "severity": "Medium" }]
+      },
+      {
+        "appName": "Chrome",
+        "version": "114.0",
+        "vulnerabilities": [{ "severity": "Low" }]
+      }
+    ]
+  },
+  {
+    "computerId": "comp-002",
+    "machineName": "DESKTOP-002",
+    "osVersion": "Windows 10",
+    "ipAddress": "192.168.10.2",
+    "installedApplications": [
+      {
+        "appName": "Notepad++",
+        "version": "8.4.7",
+        "vulnerabilities": [{ "severity": "Low" }]
+      },
+      {
+        "appName": "Java Runtime",
+        "version": "8u351",
+        "vulnerabilities": [{ "severity": "Critical" }]
+      }
+    ]
+  },
+  {
+    "computerId": "comp-003",
+    "machineName": "LAPTOP-003",
+    "osVersion": "Windows 11",
+    "ipAddress": "192.168.10.3",
+    "installedApplications": [
+      {
+        "appName": "Firefox",
+        "version": "108.0",
+        "vulnerabilities": [{ "severity": "Medium" }]
+      },
+      {
+        "appName": "WinRAR",
+        "version": "6.1",
+        "vulnerabilities": [{ "severity": "High" }, { "severity": "Critical" }]
+      },
+      {
+        "appName": "Zoom",
+        "version": "5.12",
+        "vulnerabilities": []
+      }
+    ]
+  },
+  {
+    "computerId": "comp-004",
+    "machineName": "DESKTOP-004",
+    "osVersion": "Windows 10",
+    "ipAddress": "192.168.10.4",
+    "installedApplications": [
+      {
+        "appName": "Chrome",
+        "version": "114.0",
+        "vulnerabilities": []
+      },
+      {
+        "appName": "7-Zip",
+        "version": "19.0",
+        "vulnerabilities": [{ "severity": "Medium" }]
+      }
+    ]
+  },
+  {
+    "computerId": "comp-005",
+    "machineName": "LAPTOP-005",
+    "osVersion": "Windows 11",
+    "ipAddress": "192.168.10.5",
+    "installedApplications": [
+      {
+        "appName": "Node.js",
+        "version": "18.14",
+        "vulnerabilities": [{ "severity": "Critical" }, { "severity": "High" }, { "severity": "Low" }]
+      },
+      {
+        "appName": "VS Code",
+        "version": "1.76",
+        "vulnerabilities": []
+      }
+    ]
+  }
+],
+"applications":
+  {
+  "High": [
+    { "appName": "App A", "version": "1.0.0" },
+    { "appName": "App E", "version": "2.1.3" },
+    { "appName": "App I", "version": "3.0.0" },
+    { "appName": "App M", "version": "4.5.1" },
+    { "appName": "App Q", "version": "1.2.9" },
+    { "appName": "App U", "version": "7.0.4" },
+    { "appName": "App Y", "version": "8.1.0" },
+    { "appName": "App AC", "version": "3.9.3" },
+    { "appName": "App AG", "version": "6.6.6" },
+    { "appName": "App AK", "version": "5.3.2" }
+  ],
+  "Medium": [
+    { "appName": "App B", "version": "2.0.0" },
+    { "appName": "App F", "version": "5.6.7" },
+    { "appName": "App J", "version": "3.2.1" },
+    { "appName": "App N", "version": "2.5.5" },
+    { "appName": "App R", "version": "9.0.0" },
+    { "appName": "App V", "version": "4.4.4" },
+    { "appName": "App Z", "version": "6.1.2" },
+    { "appName": "App AD", "version": "1.0.5" },
+    { "appName": "App AH", "version": "7.3.9" },
+    { "appName": "App AL", "version": "2.2.2" }
+  ],
+  "Low": [
+    { "appName": "App C", "version": "3.0.1" },
+    { "appName": "App G", "version": "1.3.3" },
+    { "appName": "App K", "version": "2.8.8" },
+    { "appName": "App O", "version": "4.4.4" },
+    { "appName": "App S", "version": "5.5.5" },
+    { "appName": "App W", "version": "6.6.6" },
+    { "appName": "App AA", "version": "7.7.7" },
+    { "appName": "App AE", "version": "8.8.8" },
+    { "appName": "App AI", "version": "9.9.9" },
+    { "appName": "App AM", "version": "1.1.1" }
+  ],
+  "Critical": [
+    { "appName": "App D", "version": "4.0.0" },
+    { "appName": "App H", "version": "5.0.0" },
+    { "appName": "App L", "version": "6.0.0" },
+    { "appName": "App P", "version": "7.0.0" },
+    { "appName": "App T", "version": "8.0.0" },
+    { "appName": "App X", "version": "9.0.0" },
+    { "appName": "App AB", "version": "1.0.1" },
+    { "appName": "App AF", "version": "2.2.1" },
+    { "appName": "App AJ", "version": "3.3.3" },
+    { "appName": "App AN", "version": "4.4.4" }
+  ]
+}
+
+}

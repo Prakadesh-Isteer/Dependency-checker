@@ -60,6 +60,12 @@ export class ViewComputerDialogComponent implements OnInit,AfterViewInit {
   });
 }
 }
+getSortedApplications() {
+  return this.computerData.applications
+    ?.slice()
+    .sort((a: any, b: any) => (b.vulnerabilities?.length || 0) - (a.vulnerabilities?.length || 0));
+}
+
 
   openViewVulnerabilityDialog(applicationUuid: string) {
       this.http.get(`${vulnSyncEnvironments.getApplicationVulnerabilities}${applicationUuid}/vulnerabilities`)

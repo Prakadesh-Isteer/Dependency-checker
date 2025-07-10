@@ -1,0 +1,111 @@
+<mat-sidenav-container class="sidenav-container" role="region" aria-label="Main application layout">
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    [opened]="true"
+    class="sidenav"
+    role="navigation"
+    aria-label="Main navigation menu"
+  >
+    <mat-toolbar role="banner" aria-label="Application header">
+      <img src="images/isteer.png" height="50px" alt="iSteer logo">
+    </mat-toolbar>
+    <mat-nav-list role="list">
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content" role="main" aria-label="Main content">
+    <div class="d-flex flex-column">
+
+    <mat-toolbar role="toolbar" class="sticky-top" aria-label="Content toolbar">
+      <strong class="h2">Dashboard</strong>
+    </mat-toolbar>
+
+    <!----------------dashboard-section--------------------->
+    <div class="container-fluid content-area">
+        <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+               <div class="d-flex justify-content-center flex-column text-center">
+               <span class="fs-4 text-success fnw-bold">Total Computers</span>
+               <span class="h2">{{computerData.length}}</span>
+              </div> 
+              </div> 
+
+              <div>
+
+                <!-- <div class="d-flex p-3">
+                  <button (click)="filterSeverity('All')" class="btn btn-secondary">All</button><button (click)="filterSeverity('Low')" class="ms-4 btn btn-success">Low</button><button (click)="filterSeverity('Medium')" class="ms-4 btn btn-primary">Medium</button><button (click)="filterSeverity('High')" class="ms-4 btn btn-warning">High</button><button (click)="filterSeverity('Critical')" class="ms-4 btn btn-danger">Critical</button>
+                </div> -->
+
+                <div class="rounded-3 bg-white computer-table-parent p-2">
+      
+                <table class="computer-table w-100">
+                  <thead>
+                    <tr>
+                    <th>Computer Id</th>
+                    <th>Ip Address</th>
+                    <th>Machine Name</th>
+                    <th>Os Version</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let computer of computerData" (click)="viewApplications(computer.installedApplications)">
+                    <td >{{computer.computerId}}</td>
+                    <td>{{computer.ipAddress}}</td>
+                    <td>{{computer.machineName}}</td>
+                    <td>{{computer.osVersion}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+
+                <div class="rounded-3 app-table-parent bg-white p-2 mt-4">
+                    <table *ngIf="applicationsData.length" class="app-table w-100">
+                      <thead>
+                        <tr>
+                          <th class="w-50">Name</th>
+                          <th>Version</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="w-50" *ngFor="let app of applicationsData">
+                        <td>{{app.appName}}</td>
+                        <td>{{app.version}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div *ngIf="!applicationsData.length" class="app-no-data d-flex justify-content-center align-items-center">
+                    No Application Found
+                    </div>
+                </div>
+
+              </div>
+         
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+               <div class="d-flex justify-content-center flex-column text-center">
+               <span class="fs-4 text-success fnw-bold">Total Applications</span>
+               <span class="h2">{{severityAppcount}}</span>
+              </div> 
+            </div>
+            
+           <div class="chart-container">
+           <canvas #vulnPieChart></canvas>
+           </div>
+
+            </div>
+
+            <div>
+
+            </div>
+        </div>
+    </div>
+    <!----------------dashboard-section-end-------------------->
+
+
+    </div>
+  
+  </mat-sidenav-content>
+</mat-sidenav-container>

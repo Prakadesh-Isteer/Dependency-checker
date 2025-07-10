@@ -62,5 +62,8 @@ export const routes: Routes = [
       {path: 'unresolvedCpe/:computerUuid',
        loadComponent: () => import('./unresolvedcpe/unresolvedcpe.component').then(m => m.UnresolvedcpeComponent)
        }]
+      },{
+        path:'vmsDashboard',
+        loadComponent:()=> import('./vms-dashboard/vms-dashboard.component').then(m=> m.VmsDashboardComponent)
       }
   ];
